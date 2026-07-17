@@ -15,10 +15,10 @@ def get_weather() -> None:
     response = requests.get(url, params=params)
     response.raise_for_status()
     data = response.json()
-    print(f"City: {data["location"]["name"]}")
-    print(f"Country: {data["location"]["country"]}")
-    print(f"Temperature: {data["current"]["temp_c"]}°C")
-    print(f"Condition: {data["current"]["condition"]["text"]}")
+    print(f"City: {data['location']['name']}")
+    print(f"Country: {data['location']['country']}")
+    print(f"Temperature: {data['current']['temp_c']}°C")
+    print(f"Condition: {data['current']['condition']['text']}")
 
 
 if __name__ == "__main__":
